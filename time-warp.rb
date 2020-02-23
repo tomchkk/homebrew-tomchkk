@@ -10,6 +10,6 @@ class TimeWarp < Formula
   # depends_on "cmake" => :build
 
   def install
-	bin.install "time-warp"
+	bin.install "index"
   end
 end
