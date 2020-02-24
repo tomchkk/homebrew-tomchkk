@@ -4,8 +4,8 @@
 class TimeWarp < Formula
   desc ""
   homepage ""
-  url "https://#{ENV['u4pzCFuLtEzCsdV2ivxf']}@gitlab.com/tomchkk-private/projects/time-warp/-/archive/v0.0.1/time-warp-v0.0.1.tar.gz"
-  sha256 "35c60901a15b39c572a41a3f9d0215476bed5341f73c3b3371e8df29e697aa89"
+  url "https://gitlab.com/tomchkk-public/time-warp/-/archive/v0.0.1/time-warp-v0.0.1.tar.gz"
+  sha256 "3ca8e7ea6d4599a6537f338e3cd55d34c4f5d76253218727c2e75bf58e788491"
 
   def install
 	bin.install "index"
