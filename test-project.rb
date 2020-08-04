@@ -12,8 +12,7 @@ class TestProject < Formula
 
   def install
     system "touch", "test-empty"
-    system "mk-dir", "test-dir"
-    bin.install "test-dir"
+    bin.install "test-empty"
 
     system "make", "all"
   end
