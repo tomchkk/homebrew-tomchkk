@@ -11,6 +11,10 @@ class TestProject < Formula
   # depends_on "cmake" => :build
 
   def install
+    system "touch", "test-empty"
+    system "mk-dir", "test-dir"
+    bin.install "test-dir"
+
     system "make", "all"
   end
 
