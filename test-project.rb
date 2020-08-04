@@ -4,17 +4,14 @@
 class TestProject < Formula
   desc ""
   homepage ""
-  url "https://gitlab.com/tomchkk-public/test-project/-/archive/v1.0.0/test-project-v1.0.0.tar.gz"
-  sha256 "b61735c96f2dcbcc32ef0f0314f9da1305ab806fc11ed0bd72b4d94e47dacbe0"
+  url "https://gitlab.com/tomchkk-public/test-project/-/archive/v1.0.1/test-project-v1.0.1.tar.gz"
+  sha256 "1761338ec2f1463a6151a7a98bacaed47f731da9d03a2f3dc3c864b38dc65176"
   license ""
 
-  # depends_on "cmake" => :build
-
   def install
-    system "touch", "test-empty"
-    bin.install "test-empty"
+    system "make", "install"
 
-    system "make", "all"
+    bin.install Dir["test-output/*"]
   end
 
   test do
