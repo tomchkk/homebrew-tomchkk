@@ -11,7 +11,7 @@ class TestProject < Formula
   # depends_on "cmake" => :build
 
   def install
-    system "make"
+    system "make", "all"
   end
 
   test do
