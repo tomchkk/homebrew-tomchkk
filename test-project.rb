@@ -9,7 +9,7 @@ class TestProject < Formula
   license ""
 
   def install
-    system "make", "install"
+    system "make"
 
     bin.install Dir["test-output/*"]
   end
