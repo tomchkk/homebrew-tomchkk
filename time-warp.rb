@@ -9,7 +9,7 @@ end
 class TimeWarp < Formula
   desc "A MacOS Time Machine Tinkerer"
   homepage "https://github.com/tomchkk/time-warp"
-  version "0.17.7"
+  version "1.0.0"
   url "#{homepage}.git", :using => NoSubmodulesStrategy, :tag => "v#{version}"
   license "MIT"
 
@@ -35,6 +35,17 @@ class TimeWarp < Formula
   def post_install
     # warm the services cache
     system "#{opt_bin}/time-warp"
+  end
+
+  def caveats
+    <<~EOS
+      Time Warp can indicate its status by integrating automatically with AnyBar.
+      Just install the app with:
+       - `brew cask install anybar`.
+
+      After updating restart the background watch process with:
+       - `brew services restart time-warp`
+    EOS
   end
 
   plist_options :startup => true
