@@ -9,7 +9,7 @@ end
 class TimeWarp < Formula
   desc "A MacOS Time Machine Tinkerer"
   homepage "https://github.com/tomchkk/time-warp"
-  version "1.0.2"
+  version "1.1.0"
   url "#{homepage}.git", :using => NoSubmodulesStrategy, :tag => "v#{version}"
   license "MIT"
 
