@@ -41,9 +41,9 @@ class TimeWarp < Formula
     <<~EOS
       Time Warp can indicate its status by integrating automatically with AnyBar.
       Just install the app with:
-       - `brew cask install anybar`.
+       - `brew install --cask anybar`.
 
-      After updating restart the background watch process with:
+      After an update, restart the background watch process with:
        - `brew services restart time-warp`
     EOS
   end
