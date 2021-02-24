@@ -23,9 +23,4 @@ usage:
 tap: .is.installed.brew
 tap:
 	mkdir -p ${TAP}
-	ln -s ${PWD} ${TAP}
-
-.update.usage: ## : update : Update or install the latest versions of all available formula
-update: .is.installed.brew
-update:
-	@echo TODO!
+	ln -fs ${PWD} ${TAP}

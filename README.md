@@ -10,7 +10,3 @@ My personal homebrew tap
 - Clone this repo, usually to somewhere like `~/Developer/tomchkk`, and `cd` into the project
 - Run `make tap` to symlink `homebrew-tomchkk` into the homebrew tap dir
 - Check the output of `brew tap` includes `tomchkk/tomchkk`
-
-## Installation/Updating
-
-- Run `make update` to update or install the latest versions of all available formula
