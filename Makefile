@@ -14,7 +14,18 @@ usage:
 	@grep -Eh '^.*\.usage:\ ##\ :\ .+' ${MAKEFILE_LIST} | cut -d ' ' -f '3-' | column -t -s ':' | sort
 	@echo
 
-.install.usage: ## : install : Install project
-install:
+.is.installed.%:
+	@: $(if $(shell type $* &>/dev/null && echo 0), \
+			, \
+			$(error $* is not installed))
+
+.tap.usage: ## : tap : Symlink project to brew's tap directory
+tap: .is.installed.brew
+tap:
 	mkdir -p ${TAP}
 	ln -s ${PWD} ${TAP}
+
+.update.usage: ## : update : Update or install the latest versions of all available formula
+update: .is.installed.brew
+update:
+	@echo TODO!
