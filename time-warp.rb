@@ -67,7 +67,7 @@ class TimeWarp < Formula
         <string>#{var}/log/time-warp.log</string>
         <key>StandardErrorPath</key>
         <string>#{var}/log/time-warp.log</string>
-        <key>RunAtLoad</key>
+        <key>KeepAlive</key>
         <true/>
       </dict>
     </plist>
