@@ -1,9 +1,9 @@
 class Submarine < Formula
   desc "Navigate the murky waters of git submodules"
   homepage "https://github.com/tomchkk/submarine"
-  version "1.2.0"
+  version "1.2.1"
   url "#{homepage}/archive/v#{version}.tar.gz"
-  sha256 "b7b24a8748ee5d21e2d88f1205a8be42e054054cf13189685250ad01403e83e4"
+  sha256 "da12f9f9af1a0a7d81f1002d069af7c2fda93500022d8835e425ff163f7c0678"
   license "MIT"
 
   def install
