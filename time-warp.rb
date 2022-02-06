@@ -15,7 +15,7 @@ class TimeWarp < Formula
 
   depends_on "submarine" => :build
   depends_on "terminal-notifier"
-  depends_on "watchexec"
+  depends_on "watchexec@1.17"
 
   def install
     system "make", "VERSION=#{version}"
