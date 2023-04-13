@@ -48,11 +48,37 @@ class TimeWarp < Formula
     EOS
   end
 
-  service do
-    run [opt_bin/"time-warp", "watch"]
-    keep_alive true
-    log_path var/"log/time-warp.log"
-    error_log_path var/"log/time-warp.log"
+  # service do
+  #   run [opt_bin/"time-warp", "watch"]
+  #   keep_alive true
+  #   log_path var/"log/time-warp.log"
+  #   error_log_path var/"log/time-warp.log"
+  # end
+
+  plist_options :startup => true
+
+  def plist
+    <<~EOS
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+      <dict>
+        <key>Label</key>
+        <string>#{plist_name}</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>#{opt_bin}/time-warp</string>
+          <string>watch</string>
+        </array>
+        <key>StandardOutPath</key>
+        <string>#{var}/log/time-warp.log</string>
+        <key>StandardErrorPath</key>
+        <string>#{var}/log/time-warp.log</string>
+        <key>KeepAlive</key>
+        <true/>
+      </dict>
+    </plist>
+    EOS
   end
 
   test do
