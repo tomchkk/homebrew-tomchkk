@@ -48,7 +48,9 @@ class TimeWarp < Formula
     EOS
   end
 
-  plist_options :startup => true
+  service do
+    require_root: true
+  end
 
   def plist
     <<~EOS
