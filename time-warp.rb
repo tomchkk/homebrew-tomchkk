@@ -49,7 +49,7 @@ class TimeWarp < Formula
   end
 
   service do
-    require_root: true
+    require_root true
   end
 
   def plist
